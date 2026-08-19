@@ -1,0 +1,41 @@
+name: Atualizar Calendario Economico 3 estrelas
+
+on:
+  schedule:
+    # A cada 15 min. Cron do GitHub roda em UTC e pode atrasar alguns minutos.
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: calendario-3-estrelas
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Coletar Investing e montar dados.json
+        run: node scripts/build-cal.mjs
+
+      - name: Commit se dados.json mudou
+        run: |
+          git config user.name "winprime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add dados.json
+          if git diff --cached --quiet; then
+            echo "Sem mudancas em dados.json"
+          else
+            git commit -m "auto: atualiza calendario economico 3 estrelas"
+            git push
+          fi
