@@ -11,75 +11,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alertas — Calendário Econômico 3★</title>
 <style>
-:root { color-scheme: light; }
+:root {
+  color-scheme: dark;
+  --gold-1:#f7e7a8; --gold-2:#e6c15a; --gold-3:#c8962c; --gold-4:#8a641a;
+  --line:#3a3018;
+}
 * { box-sizing: border-box; }
 body {
-  margin: 0; background: #f4f6fa; color: #1a2230;
+  margin: 0; color: #ece7db;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  padding: 16px;
+  padding: 18px;
+  background:
+    radial-gradient(1200px 500px at 50% -8%, rgba(230,193,90,.18), transparent 60%),
+    radial-gradient(900px 600px at 110% 10%, rgba(200,150,44,.10), transparent 55%),
+    linear-gradient(180deg, #070707 0%, #0b0a08 40%, #050505 100%);
+  min-height: 100vh;
 }
-.wrap { max-width: 860px; margin: 0 auto; }
+.wrap { max-width: 880px; margin: 0 auto; }
+.gold-text {
+  background: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 45%, var(--gold-3) 70%, var(--gold-1) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: var(--gold-2);
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
 header.top {
-  background: #0f2038; color: #fff; border-radius: 14px; padding: 18px 20px;
-  display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+  position: relative;
+  background: linear-gradient(180deg, rgba(40,34,18,.95), rgba(12,11,8,.98));
+  border: 1px solid var(--line);
+  border-radius: 18px; padding: 20px 24px;
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;
+  box-shadow: 0 18px 40px rgba(0,0,0,.65), inset 0 1px 0 rgba(247,231,168,.22), inset 0 -2px 10px rgba(0,0,0,.7);
 }
-header.top h1 { font-size: 18px; margin: 0; font-weight: 700; letter-spacing:.2px;}
-header.top .sub { font-size: 12.5px; opacity: .8; margin-top: 3px; }
+header.top::before{
+  content:""; position:absolute; inset:0; border-radius:18px; padding:1px;
+  background: linear-gradient(135deg, rgba(247,231,168,.65), rgba(138,100,26,.15) 40%, rgba(247,231,168,.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
+}
+header.top h1 { font-size: 19px; margin: 0; font-weight: 800; letter-spacing:.3px; }
+header.top .sub { font-size: 12.5px; color:#b7ac8f; margin-top: 5px; }
 .clock { text-align: right; }
-.clock .big { font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
-.clock .tz { font-size: 11.5px; opacity: .75; margin-top: 4px; }
-
-.controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; align-items:center; }
+.clock .big { font-size: 34px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing:1px; }
+.clock .tz { font-size: 11.5px; color:#a99f84; margin-top: 5px; letter-spacing:.4px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; align-items:center; }
 button {
-  font-size: 14px; font-weight: 600; border: none; border-radius: 10px;
-  padding: 10px 16px; cursor: pointer;
+  font-size: 14px; font-weight: 700; border: none; border-radius: 12px;
+  padding: 11px 18px; cursor: pointer; letter-spacing:.2px;
+  transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
 }
-.btn-primary { background: #1e6bff; color: #fff; }
-.btn-primary:hover { background:#1559d6; }
-.btn-ghost { background: #e6ebf3; color: #22304a; }
-.btn-ghost:hover { background:#d8dfec; }
-select { font-size:13.5px; padding:9px 10px; border-radius:10px; border:1px solid #cfd6e2; background:#fff; color:#22304a; max-width:230px; }
-label.sel { font-size:12.5px; color:#48566b; display:flex; align-items:center; gap:6px; }
-.status-pill { font-size:12.5px; padding:6px 12px; border-radius:999px; display:inline-flex; align-items:center; gap:6px; }
-.on { background:#e3f7e8; color:#137a34; }
-.off { background:#fdeaea; color:#b3261e; }
-
+button:active { transform: translateY(1px); }
+.btn-primary {
+  color: #241a03;
+  background: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 48%, var(--gold-3) 100%);
+  box-shadow: 0 8px 18px rgba(200,150,44,.35), inset 0 1px 0 rgba(255,255,255,.65), inset 0 -2px 6px rgba(120,86,20,.6);
+}
+.btn-primary:hover { filter: brightness(1.06); box-shadow: 0 10px 24px rgba(230,193,90,.5), inset 0 1px 0 rgba(255,255,255,.7); }
+.btn-ghost {
+  color: var(--gold-1);
+  background: linear-gradient(180deg, #1a1710, #100e09);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 rgba(247,231,168,.12), 0 6px 14px rgba(0,0,0,.5);
+}
+.btn-ghost:hover { border-color: var(--gold-3); color: var(--gold-2); }
+select {
+  font-size:13.5px; padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+  background:#100e09; color:var(--gold-1); max-width:230px;
+  box-shadow: inset 0 1px 0 rgba(247,231,168,.08);
+}
+label.sel { font-size:12.5px; color:#b7ac8f; display:flex; align-items:center; gap:6px; }
+.status-pill { font-size:12.5px; padding:7px 14px; border-radius:999px; display:inline-flex; align-items:center; gap:6px; font-weight:700; border:1px solid transparent; }
+.on { background:linear-gradient(180deg,#14361d,#0c220f); color:#7ff0a3; border-color:#1f6b34; box-shadow: inset 0 1px 0 rgba(127,240,163,.2); }
+.off { background:linear-gradient(180deg,#2a1210,#1a0b0a); color:#ff9d94; border-color:#6b241e; }
 .nextline {
-  background:#fff; border:1px solid #e3e8f0; border-radius:12px; padding:14px 16px; margin-bottom:14px;
-  font-size:15px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  position:relative;
+  background: linear-gradient(180deg, #14120b, #0c0b07);
+  border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin-bottom:16px;
+  font-size:15px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; color:#d8cfb6;
+  box-shadow: 0 10px 26px rgba(0,0,0,.55), inset 0 1px 0 rgba(247,231,168,.1);
 }
-.nextline b { color:#0f2038; }
-
+.nextline b { color: var(--gold-1); }
 #alertBanner {
   display:none; position: sticky; top: 8px; z-index: 50;
-  background: #b3261e; color:#fff; border-radius:14px; padding:18px 20px; margin-bottom:14px;
-  box-shadow: 0 8px 24px rgba(179,38,30,.35);
-  animation: pulse 1s infinite;
+  background: linear-gradient(180deg, #2a0f0c, #180706);
+  color:#ffe9c9; border-radius:16px; padding:20px 22px; margin-bottom:16px;
+  border:1px solid #7a2a20;
+  box-shadow: 0 14px 34px rgba(0,0,0,.7), 0 0 0 1px rgba(247,231,168,.15) inset, 0 0 30px rgba(230,140,60,.35);
+  animation: pulse 1.1s infinite;
 }
-@keyframes pulse { 0%,100%{ box-shadow:0 8px 24px rgba(179,38,30,.35);} 50%{ box-shadow:0 8px 34px rgba(179,38,30,.75);} }
-#alertBanner .a-title { font-size:13px; text-transform:uppercase; letter-spacing:1px; opacity:.9; }
-#alertBanner .a-event { font-size:20px; font-weight:800; margin-top:4px; }
-#alertBanner .a-meta { font-size:14px; margin-top:6px; opacity:.95; }
-#alertBanner .a-actions { display:flex; gap:8px; margin-top:12px; }
-#alertBanner button { background:#fff; color:#b3261e; }
-
-table { width:100%; border-collapse: collapse; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(20,30,50,.06); }
-th { text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.5px; color:#6b7787; background:#eef2f8; padding:11px 12px; }
-td { padding:12px; border-top:1px solid #eef1f6; font-size:14.5px; vertical-align:middle; }
-tr.done td { color:#98a2b3; }
-tr.soon { background:#fff6f5; }
-tr.soon td { color:#7a140e; font-weight:600; }
-.time-cell { font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap; }
-.flag { font-size:18px; margin-right:6px; }
-.badge { font-size:12px; font-weight:700; padding:4px 10px; border-radius:999px; white-space:nowrap; display:inline-block; }
-.b-wait { background:#eef2f8; color:#48566b; }
-.b-soon { background:#b3261e; color:#fff; }
-.b-done { background:#f0f2f5; color:#98a2b3; }
+@keyframes pulse {
+  0%,100%{ box-shadow: 0 14px 34px rgba(0,0,0,.7), inset 0 0 0 1px rgba(247,231,168,.15), 0 0 26px rgba(230,140,60,.30); }
+  50%{ box-shadow: 0 16px 42px rgba(0,0,0,.75), inset 0 0 0 1px rgba(247,231,168,.35), 0 0 46px rgba(247,180,90,.6); }
+}
+#alertBanner .a-title { font-size:12.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gold-1); font-weight:800; }
+#alertBanner .a-event { font-size:21px; font-weight:800; margin-top:5px; color:#fff2df; }
+#alertBanner .a-meta { font-size:14px; margin-top:6px; color:#e8cfae; }
+#alertBanner .a-actions { display:flex; gap:8px; margin-top:14px; }
+#alertBanner button { background:linear-gradient(180deg,var(--gold-1),var(--gold-3)); color:#2a1a04; box-shadow: inset 0 1px 0 rgba(255,255,255,.6); }
+.tablewrap {
+  border-radius:16px; overflow:hidden; border:1px solid var(--line);
+  box-shadow: 0 18px 44px rgba(0,0,0,.6), inset 0 1px 0 rgba(247,231,168,.1);
+}
+table { width:100%; border-collapse: collapse; background:linear-gradient(180deg,#100e09,#0a0906); }
+th {
+  text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.8px;
+  color:#2a1f06; padding:13px 14px;
+  background: linear-gradient(180deg, var(--gold-1), var(--gold-2) 55%, var(--gold-3));
+  font-weight:800;
+  box-shadow: inset 0 -2px 6px rgba(120,86,20,.5), inset 0 1px 0 rgba(255,255,255,.5);
+}
+td { padding:14px; border-top:1px solid rgba(58,48,24,.6); font-size:14.5px; vertical-align:middle; color:#ded5bd; }
+tbody tr:nth-child(even) td { background: rgba(255,255,255,.015); }
+tr.done td { color:#7c7462; }
+tr.soon td { color:#ffe1c2; background: linear-gradient(90deg, rgba(120,40,20,.35), rgba(120,40,20,.06)); font-weight:700; }
+.time-cell { font-variant-numeric:tabular-nums; font-weight:800; white-space:nowrap; color:var(--gold-1); }
+.flag { font-size:19px; margin-right:6px; }
+.badge { font-size:11.5px; font-weight:800; padding:5px 12px; border-radius:999px; white-space:nowrap; display:inline-block; letter-spacing:.3px; }
+.b-wait { background:linear-gradient(180deg,#1b1810,#12100a); color:var(--gold-2); border:1px solid var(--line); }
+.b-soon { background:linear-gradient(180deg,#e6553f,#a5311f); color:#fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 0 14px rgba(230,90,60,.5); }
+.b-done { background:#141210; color:#6f6858; border:1px solid #241f14; }
 .cd { font-variant-numeric:tabular-nums; }
-
-footer { margin-top:16px; font-size:12px; color:#7a869a; line-height:1.6; }
-.dot { color:#c3cbd6; }
-.empty { background:#fff; border:1px dashed #cfd6e2; border-radius:12px; padding:24px; text-align:center; color:#7a869a; }
+footer { margin-top:18px; font-size:12px; color:#8f866f; line-height:1.7; }
+.dot { color: var(--gold-4); }
+.empty {
+  background:linear-gradient(180deg,#12100a,#0a0906); border:1px dashed var(--line); border-radius:14px;
+  padding:26px; text-align:center; color:#8f866f;
+  box-shadow: inset 0 1px 0 rgba(247,231,168,.06);
+}
+a { color: var(--gold-2); }
 </style>
 </head>
 <body>
@@ -87,11 +145,11 @@ footer { margin-top:16px; font-size:12px; color:#7a869a; line-height:1.6; }
 
   <header class="top">
     <div>
-      <h1>📅 Alertas — Calendário Econômico <span style="color:#ffd54a">★★★</span></h1>
-      <div class="sub">Somente eventos de <b>3 estrelas</b> (alto impacto) · Fonte: Investing.com · <span id="dateLabel"></span></div>
+      <h1><span class="gold-text">📈 Calendário Econômico</span> <span class="gold-text">★★★</span></h1>
+      <div class="sub">Somente eventos de <b style="color:var(--gold-1)">3 estrelas</b> (alto impacto) · Fonte: Investing.com · <span id="dateLabel"></span></div>
     </div>
     <div class="clock">
-      <div class="big" id="clock">--:--:--</div>
+      <div class="big gold-text" id="clock">--:--:--</div>
       <div class="tz">Horário de Brasília (GMT-3)</div>
     </div>
   </header>
@@ -116,16 +174,18 @@ footer { margin-top:16px; font-size:12px; color:#7a869a; line-height:1.6; }
 
   <div class="nextline" id="nextLine">Carregando…</div>
 
+  <div class="tablewrap">
   <table id="tbl">
     <thead>
       <tr><th style="width:74px">Hora</th><th style="width:150px">País</th><th>Evento</th><th style="width:150px">Situação</th></tr>
     </thead>
     <tbody id="tbody"></tbody>
   </table>
+  </div>
   <div class="empty" id="emptyMsg" style="display:none">Nenhum evento de 3 estrelas para esta data.</div>
 
   <footer>
-    <div><b>Como funciona:</b> o painel dispara aviso visual, sonoro e <b>locução por voz feminina</b> <b>5 minutos antes</b> de cada evento de 3 estrelas. Funciona enquanto esta página estiver aberta.</div>
+    <div><b style="color:var(--gold-1)">Como funciona:</b> o painel dispara aviso visual, sonoro e <b style="color:var(--gold-1)">locução por voz feminina</b> <b style="color:var(--gold-1)">5 minutos antes</b> de cada evento de 3 estrelas. Funciona enquanto esta página estiver aberta.</div>
     <div style="margin-top:6px">Última atualização dos dados: <span id="lastUpd">—</span> <span class="dot">·</span> Atualização automática todo dia de manhã.</div>
     <div style="margin-top:6px" id="voiceNote"></div>
   </footer>
