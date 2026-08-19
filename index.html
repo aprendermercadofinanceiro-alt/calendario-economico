@@ -186,7 +186,7 @@ a { color: var(--gold-2); }
 
   <footer>
     <div><b style="color:var(--gold-1)">Como funciona:</b> o painel dispara aviso visual, sonoro e <b style="color:var(--gold-1)">locução por voz feminina</b> <b style="color:var(--gold-1)">5 minutos antes</b> de cada evento de 3 estrelas. Funciona enquanto esta página estiver aberta.</div>
-    <div style="margin-top:6px">Última atualização dos dados: <span id="lastUpd">—</span> <span class="dot">·</span> Atualização automática todo dia de manhã.</div>
+    <div style="margin-top:6px">Última atualização dos dados: <span id="lastUpd">—</span> <span class="dot">·</span> Motor automático (GitHub Actions) a cada ~15 min.</div>
     <div style="margin-top:6px" id="voiceNote"></div>
   </footer>
 
@@ -194,17 +194,8 @@ a { color: var(--gold-2); }
 
 <script>
 // ====== DADOS (atualizados automaticamente pela tarefa diária) ======
-const CAL = {
-  dateLabel: "quarta-feira, 19 de agosto de 2026",
-  lastUpdated: "19/08/2026 19:46 (GMT-3)",
-  events: [
-    { iso:"2026-08-19T03:00:00-03:00", cur:"UK", flag:"🇬🇧", name:"IPC Reino Unido (Anual) (Jul)" },
-    { iso:"2026-08-19T06:00:00-03:00", cur:"EU", flag:"🇪🇺", name:"IPC Zona do Euro (Anual) (Jul)" },
-    { iso:"2026-08-19T11:30:00-03:00", cur:"US", flag:"🇺🇸", name:"Estoques de Petróleo Bruto" },
-    { iso:"2026-08-19T15:00:00-03:00", cur:"US", flag:"🇺🇸", name:"Atas da Reunião do FOMC" },
-    { iso:"2026-08-19T22:15:00-03:00", cur:"CN", flag:"🇨🇳", name:"Taxa Preferencial de Empréstimo do BPC" }
-  ]
-};
+// ====== DADOS -- vêm do dados.json, atualizado automaticamente pelo motor (GitHub Actions) ======
+let CAL = { dateLabel: "Carregando…", lastUpdated: "—", events: [] };
 const LEAD_MS = 5 * 60 * 1000; // 5 minutos
 
 // ====== ESTADO ======
@@ -213,8 +204,28 @@ let audioCtx = null;
 const fired = new Set();      // eventos já alertados (T-5)
 let lastSpokenText = '';
 
-document.getElementById('dateLabel').textContent = CAL.dateLabel;
-document.getElementById('lastUpd').textContent = CAL.lastUpdated;
+function applyMeta(){
+  document.getElementById('dateLabel').textContent = CAL.dateLabel;
+  document.getElementById('lastUpd').textContent = CAL.lastUpdated;
+}
+async function loadData(){
+  const ts = Date.now();
+  const SOURCES = [
+    'dados.json?_=' + ts,
+    'https://raw.githubusercontent.com/aprendermercadofinanceiro-alt/calendario-economico/main/dados.json?_=' + ts
+  ];
+  for(const url of SOURCES){
+    try{
+      const r = await fetch(url, { cache:'no-store' });
+      if(!r.ok) continue;
+      const d = await r.json();
+      if(d && Array.isArray(d.events)){ CAL = d; applyMeta(); render(); return; }
+    }catch(e){}
+  }
+}
+applyMeta();
+loadData();
+setInterval(loadData, 5 * 60 * 1000);
 
 // ---------- VOZ (Web Speech API) ----------
 let voices = [], selectedVoice = null;
