@@ -1,0 +1,43 @@
+{
+  "dateLabel": "quarta-feira, 19 de agosto de 2026",
+  "lastUpdated": "19/08/2026 20:22 (GMT-3)",
+  "source": "Investing.com",
+  "events": [
+    {
+      "iso": "2026-08-19T03:00:00-03:00",
+      "cur": "GBP",
+      "flag": "🇬🇧",
+      "name": "IPC Reino Unido (Anual) (Jul)"
+    },
+    {
+      "iso": "2026-08-19T06:00:00-03:00",
+      "cur": "EUR",
+      "flag": "🇪🇺",
+      "name": "IPC Zona do Euro (Anual) (Jul)"
+    },
+    {
+      "iso": "2026-08-19T11:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Estoques de Petróleo Bruto"
+    },
+    {
+      "iso": "2026-08-19T15:00:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Atas da Reunião do FOMC"
+    },
+    {
+      "iso": "2026-08-19T15:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Discurso de Trump, Presidente dos EUA"
+    },
+    {
+      "iso": "2026-08-19T22:15:00-03:00",
+      "cur": "CNY",
+      "flag": "🇨🇳",
+      "name": "Taxa Preferencial de Empréstimo do BPC"
+    }
+  ]
+}
