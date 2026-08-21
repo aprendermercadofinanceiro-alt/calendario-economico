@@ -1,6 +1,6 @@
 {
   "dateLabel": "sexta-feira, 21 de agosto de 2026",
-  "lastUpdated": "21/08/2026 02:47 (GMT-3)",
+  "lastUpdated": "21/08/2026 03:36 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
@@ -14,6 +14,12 @@
       "cur": "USD",
       "flag": "🇺🇸",
       "name": "PMI do Setor de Serviços (Ago)"
+    },
+    {
+      "iso": "2026-08-21T20:00:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Discurso de Trump, Presidente dos EUA"
     }
   ]
 }
