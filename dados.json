@@ -1,25 +1,43 @@
 {
-  "dateLabel": "terça-feira, 25 de agosto de 2026",
-  "lastUpdated": "25/08/2026 21:57 (GMT-3)",
+  "dateLabel": "quarta-feira, 26 de agosto de 2026",
+  "lastUpdated": "26/08/2026 00:32 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-08-25T03:00:00-03:00",
-      "cur": "EUR",
-      "flag": "🇪🇺",
-      "name": "PIB - Alemanha (Trimestral) (Q2)"
+      "iso": "2026-08-26T09:00:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "IPCA-15 (Mensal) (Ago)"
     },
     {
-      "iso": "2026-08-25T11:00:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Confiança do Consumidor CB (Ago)"
+      "iso": "2026-08-26T09:00:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "IPCA-15 Acumulado 12 meses (Anual) (Ago)"
     },
     {
-      "iso": "2026-08-25T11:00:00-03:00",
+      "iso": "2026-08-26T09:30:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "Venda de Casas Novas (Jul)"
+      "name": "Núcleo do Índice de Preços PCE (Mensal) (Jul)"
+    },
+    {
+      "iso": "2026-08-26T09:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Núcleo do Índice de Preços PCE (Anual) (Jul)"
+    },
+    {
+      "iso": "2026-08-26T09:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "PIB dos EUA (Trimestral) (Q2)"
+    },
+    {
+      "iso": "2026-08-26T11:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Estoques de Petróleo Bruto"
     }
   ]
 }
