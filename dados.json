@@ -1,37 +1,25 @@
 {
-  "dateLabel": "quinta-feira, 27 de agosto de 2026",
-  "lastUpdated": "27/08/2026 06:44 (GMT-3)",
+  "dateLabel": "sexta-feira, 28 de agosto de 2026",
+  "lastUpdated": "28/08/2026 13:37 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-08-27T08:30:00-03:00",
+      "iso": "2026-08-28T08:00:00-03:00",
       "cur": "BRL",
       "flag": "🇧🇷",
-      "name": "Transações Correntes (USD) (Jul)"
+      "name": "IGP-M (Mensal) (Ago)"
     },
     {
-      "iso": "2026-08-27T08:30:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "Investimento Estrangeiro Direto (USD) (Jul)"
-    },
-    {
-      "iso": "2026-08-27T09:00:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "Taxa de Desemprego no Brasil (Jul)"
-    },
-    {
-      "iso": "2026-08-27T09:30:00-03:00",
+      "iso": "2026-08-28T11:00:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "Pedidos Iniciais por Seguro-Desemprego"
+      "name": "Discurso de Warsh, Governador do Fed"
     },
     {
-      "iso": "2026-08-27T17:30:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Balanço Patrimonial do Federal Reserve"
+      "iso": "2026-08-28T14:30:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Índice de Evolução de Emprego do CAGED (Jul)"
     }
   ]
 }
