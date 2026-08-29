@@ -1,25 +1,6 @@
 {
-  "dateLabel": "sexta-feira, 28 de agosto de 2026",
-  "lastUpdated": "28/08/2026 21:41 (GMT-3)",
+  "dateLabel": "sábado, 29 de agosto de 2026",
+  "lastUpdated": "29/08/2026 04:23 (GMT-3)",
   "source": "Investing.com",
-  "events": [
-    {
-      "iso": "2026-08-28T08:00:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "IGP-M (Mensal) (Ago)"
-    },
-    {
-      "iso": "2026-08-28T11:00:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Discurso de Warsh, Governador do Fed"
-    },
-    {
-      "iso": "2026-08-28T14:30:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "Índice de Evolução de Emprego do CAGED (Jul)"
-    }
-  ]
+  "events": []
 }
