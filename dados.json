@@ -1,6 +1,13 @@
 {
-  "dateLabel": "sábado, 29 de agosto de 2026",
-  "lastUpdated": "29/08/2026 04:23 (GMT-3)",
+  "dateLabel": "domingo, 30 de agosto de 2026",
+  "lastUpdated": "30/08/2026 02:37 (GMT-3)",
   "source": "Investing.com",
-  "events": []
+  "events": [
+    {
+      "iso": "2026-08-30T22:30:00-03:00",
+      "cur": "CNY",
+      "flag": "🇨🇳",
+      "name": "PMI Industrial (Ago)"
+    }
+  ]
 }
