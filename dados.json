@@ -1,13 +1,25 @@
 {
-  "dateLabel": "domingo, 30 de agosto de 2026",
-  "lastUpdated": "30/08/2026 20:51 (GMT-3)",
+  "dateLabel": "segunda-feira, 31 de agosto de 2026",
+  "lastUpdated": "31/08/2026 06:41 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-08-30T22:30:00-03:00",
-      "cur": "CNY",
-      "flag": "🇨🇳",
-      "name": "PMI Industrial (Ago)"
+      "iso": "2026-08-31T08:30:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Superávit Orçamentário (Jul)"
+    },
+    {
+      "iso": "2026-08-31T08:30:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Dívida Bruta/PIB (Mensal) (Jul)"
+    },
+    {
+      "iso": "2026-08-31T09:00:00-03:00",
+      "cur": "EUR",
+      "flag": "🇪🇺",
+      "name": "IPC - Alemanha (Mensal) (Ago)"
     }
   ]
 }
