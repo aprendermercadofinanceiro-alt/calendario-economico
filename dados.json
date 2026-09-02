@@ -1,49 +1,37 @@
 {
-  "dateLabel": "terça-feira, 1 de setembro de 2026",
-  "lastUpdated": "01/09/2026 22:23 (GMT-3)",
+  "dateLabel": "quarta-feira, 2 de setembro de 2026",
+  "lastUpdated": "02/09/2026 03:07 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-09-01T06:00:00-03:00",
-      "cur": "EUR",
-      "flag": "🇪🇺",
-      "name": "IPC Zona do Euro (Anual) (Ago)"
-    },
-    {
-      "iso": "2026-09-01T09:00:00-03:00",
+      "iso": "2026-09-02T09:00:00-03:00",
       "cur": "BRL",
       "flag": "🇧🇷",
-      "name": "PIB do Brasil (Anual) (Q2)"
+      "name": "Produção Industrial (Anual) (Jul)"
     },
     {
-      "iso": "2026-09-01T09:00:00-03:00",
+      "iso": "2026-09-02T09:00:00-03:00",
       "cur": "BRL",
       "flag": "🇧🇷",
-      "name": "PIB do Brasil (Trimestral) (Q2)"
+      "name": "Produção Industrial (Mensal) (Jul)"
     },
     {
-      "iso": "2026-09-01T10:45:00-03:00",
+      "iso": "2026-09-02T09:15:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "PMI Industrial (Ago)"
+      "name": "Variação de Empregos Privados ADP (Ago)"
     },
     {
-      "iso": "2026-09-01T11:00:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "PMI Industrial ISM (Ago)"
-    },
-    {
-      "iso": "2026-09-01T11:00:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Ofertas de Emprego JOLTS (Jul)"
-    },
-    {
-      "iso": "2026-09-01T23:00:00-03:00",
-      "cur": "NZD",
-      "flag": "🇳🇿",
+      "iso": "2026-09-02T10:45:00-03:00",
+      "cur": "CAD",
+      "flag": "🇨🇦",
       "name": "Decisão da Taxa de Juros"
+    },
+    {
+      "iso": "2026-09-02T11:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Estoques de Petróleo Bruto"
     }
   ]
 }
