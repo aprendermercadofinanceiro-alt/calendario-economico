@@ -1,37 +1,37 @@
 {
-  "dateLabel": "quarta-feira, 2 de setembro de 2026",
-  "lastUpdated": "02/09/2026 22:18 (GMT-3)",
+  "dateLabel": "quinta-feira, 3 de setembro de 2026",
+  "lastUpdated": "03/09/2026 03:05 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-09-02T09:00:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "Produção Industrial (Anual) (Jul)"
-    },
-    {
-      "iso": "2026-09-02T09:00:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "Produção Industrial (Mensal) (Jul)"
-    },
-    {
-      "iso": "2026-09-02T09:15:00-03:00",
+      "iso": "2026-09-03T09:30:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "Variação de Empregos Privados ADP (Ago)"
+      "name": "Pedidos Iniciais por Seguro-Desemprego"
     },
     {
-      "iso": "2026-09-02T10:45:00-03:00",
+      "iso": "2026-09-03T10:45:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "PMI do Setor de Serviços (Ago)"
+    },
+    {
+      "iso": "2026-09-03T10:45:00-03:00",
       "cur": "CAD",
       "flag": "🇨🇦",
       "name": "Decisão da Taxa de Juros"
     },
     {
-      "iso": "2026-09-02T11:30:00-03:00",
+      "iso": "2026-09-03T11:00:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "Estoques de Petróleo Bruto"
+      "name": "PMI ISM Não-Manufatura (Ago)"
+    },
+    {
+      "iso": "2026-09-03T17:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Balanço Patrimonial do Federal Reserve"
     }
   ]
 }
