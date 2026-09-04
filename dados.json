@@ -1,31 +1,31 @@
 {
-  "dateLabel": "quinta-feira, 3 de setembro de 2026",
-  "lastUpdated": "03/09/2026 22:07 (GMT-3)",
+  "dateLabel": "sexta-feira, 4 de setembro de 2026",
+  "lastUpdated": "04/09/2026 02:52 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-09-03T09:30:00-03:00",
+      "iso": "2026-09-04T09:30:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "Pedidos Iniciais por Seguro-Desemprego"
+      "name": "Ganho Médio por Hora Trabalhada (Mensal) (Ago)"
     },
     {
-      "iso": "2026-09-03T10:45:00-03:00",
+      "iso": "2026-09-04T09:30:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "PMI do Setor de Serviços (Ago)"
+      "name": "Relatório de Emprego (Payroll) não-agrícola (Ago)"
     },
     {
-      "iso": "2026-09-03T11:00:00-03:00",
+      "iso": "2026-09-04T09:30:00-03:00",
       "cur": "USD",
       "flag": "🇺🇸",
-      "name": "PMI ISM Não-Manufatura (Ago)"
+      "name": "Taxa de Desemprego nos EUA (Ago)"
     },
     {
-      "iso": "2026-09-03T17:30:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Balanço Patrimonial do Federal Reserve"
+      "iso": "2026-09-04T15:00:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Balança Comercial (Ago)"
     }
   ]
 }
