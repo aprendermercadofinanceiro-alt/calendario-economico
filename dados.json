@@ -1,31 +1,6 @@
 {
-  "dateLabel": "sexta-feira, 4 de setembro de 2026",
-  "lastUpdated": "04/09/2026 21:03 (GMT-3)",
+  "dateLabel": "sábado, 5 de setembro de 2026",
+  "lastUpdated": "05/09/2026 01:24 (GMT-3)",
   "source": "Investing.com",
-  "events": [
-    {
-      "iso": "2026-09-04T09:30:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Ganho Médio por Hora Trabalhada (Mensal) (Ago)"
-    },
-    {
-      "iso": "2026-09-04T09:30:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Relatório de Emprego (Payroll) não-agrícola (Ago)"
-    },
-    {
-      "iso": "2026-09-04T09:30:00-03:00",
-      "cur": "USD",
-      "flag": "🇺🇸",
-      "name": "Taxa de Desemprego nos EUA (Ago)"
-    },
-    {
-      "iso": "2026-09-04T15:00:00-03:00",
-      "cur": "BRL",
-      "flag": "🇧🇷",
-      "name": "Balança Comercial (Ago)"
-    }
-  ]
+  "events": []
 }
