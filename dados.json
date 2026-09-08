@@ -1,31 +1,25 @@
 {
-  "dateLabel": "segunda-feira, 7 de setembro de 2026",
-  "lastUpdated": "07/09/2026 23:39 (GMT-3)",
+  "dateLabel": "terça-feira, 8 de setembro de 2026",
+  "lastUpdated": "08/09/2026 04:25 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
-      "iso": "2026-09-07T05:00:00-03:00",
+      "iso": "2026-09-08T22:30:00-03:00",
       "cur": "CNY",
       "flag": "🇨🇳",
-      "name": "Reservas Cambiais (USD) (Ago)"
+      "name": "IPC China (Anual) (Ago)"
     },
     {
-      "iso": "2026-09-07T06:00:00-03:00",
-      "cur": "EUR",
-      "flag": "🇪🇺",
-      "name": "PIB (Anual) (Q2)"
-    },
-    {
-      "iso": "2026-09-07T20:50:00-03:00",
-      "cur": "JPY",
-      "flag": "🇯🇵",
-      "name": "PIB do Japão (Trimestral) (Q2)"
-    },
-    {
-      "iso": "2026-09-07T23:34:00-03:00",
+      "iso": "2026-09-08T22:30:00-03:00",
       "cur": "CNY",
       "flag": "🇨🇳",
-      "name": "Balança Comercial (USD) (Ago)"
+      "name": "IPC (Mensal) (Ago)"
+    },
+    {
+      "iso": "2026-09-08T22:30:00-03:00",
+      "cur": "CNY",
+      "flag": "🇨🇳",
+      "name": "IPP (Anual) (Ago)"
     }
   ]
 }
