@@ -1,6 +1,6 @@
 {
   "dateLabel": "segunda-feira, 7 de setembro de 2026",
-  "lastUpdated": "07/09/2026 20:45 (GMT-3)",
+  "lastUpdated": "07/09/2026 23:39 (GMT-3)",
   "source": "Investing.com",
   "events": [
     {
@@ -20,6 +20,12 @@
       "cur": "JPY",
       "flag": "🇯🇵",
       "name": "PIB do Japão (Trimestral) (Q2)"
+    },
+    {
+      "iso": "2026-09-07T23:34:00-03:00",
+      "cur": "CNY",
+      "flag": "🇨🇳",
+      "name": "Balança Comercial (USD) (Ago)"
     }
   ]
 }
