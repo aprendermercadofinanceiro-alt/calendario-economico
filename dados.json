@@ -1,6 +1,81 @@
 {
-  "dateLabel": "quarta-feira, 9 de setembro de 2026",
-  "lastUpdated": "09/09/2026 06:12 (GMT-3)",
+  "date": "2026-10-29",
+  "dateLabel": "quinta-feira, 29 de outubro de 2026",
+  "lastUpdated": "29/10/2026 12:09 (GMT-3)",
   "source": "Investing.com",
-  "events": []
+  "via": "navegador-local",
+  "events": [
+    {
+      "iso": "2026-10-29T08:00:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "IGP-M (Mensal) (Out)"
+    },
+    {
+      "iso": "2026-10-29T09:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Núcleo do Índice de Preços PCE (Mensal) (Set)"
+    },
+    {
+      "iso": "2026-10-29T09:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Núcleo do Índice de Preços PCE (Anual) (Set)"
+    },
+    {
+      "iso": "2026-10-29T09:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "PIB dos EUA (Trimestral) (Q3)"
+    },
+    {
+      "iso": "2026-10-29T09:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Pedidos Iniciais por Seguro-Desemprego"
+    },
+    {
+      "iso": "2026-10-29T10:15:00-03:00",
+      "cur": "EUR",
+      "flag": "🇪🇺",
+      "name": "Taxa de Facilidade Permanente de Depósito (Out)"
+    },
+    {
+      "iso": "2026-10-29T10:15:00-03:00",
+      "cur": "EUR",
+      "flag": "🇪🇺",
+      "name": "Decisão da Taxa de Juros (Out)"
+    },
+    {
+      "iso": "2026-10-29T10:45:00-03:00",
+      "cur": "EUR",
+      "flag": "🇪🇺",
+      "name": "Coletiva de Imprensa do BCE"
+    },
+    {
+      "iso": "2026-10-29T14:00:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Superávit Orçamentário (Set)"
+    },
+    {
+      "iso": "2026-10-29T14:00:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Dívida Bruta/PIB (Mensal) (Set)"
+    },
+    {
+      "iso": "2026-10-29T14:30:00-03:00",
+      "cur": "BRL",
+      "flag": "🇧🇷",
+      "name": "Índice de Evolução de Emprego do CAGED (Set)"
+    },
+    {
+      "iso": "2026-10-29T17:30:00-03:00",
+      "cur": "USD",
+      "flag": "🇺🇸",
+      "name": "Balanço Patrimonial do Federal Reserve"
+    }
+  ]
 }
