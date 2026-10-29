@@ -15,15 +15,17 @@ concurrency:
 
 jobs:
   atualizar:
-    runs-on: ubuntu-latest
+    # fixado para não quebrar na migração automática do ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Coletar Investing e montar dados.json
         run: node scripts/build-cal.mjs
@@ -37,5 +39,6 @@ jobs:
             echo "Sem mudancas em dados.json"
           else
             git commit -m "auto: atualiza calendario economico 3 estrelas"
+            git pull --rebase --autostash || true
             git push
           fi
