@@ -14,6 +14,7 @@
 :root {
   color-scheme: dark;
   --gold-1:#f7e7a8; --gold-2:#e6c15a; --gold-3:#c8962c; --gold-4:#8a641a;
+  --ink-0:#050505; --ink-1:#0d0d0f; --ink-2:#15130d; --ink-3:#1e1a10;
   --line:#3a3018;
 }
 * { box-sizing: border-box; }
@@ -28,19 +29,26 @@ body {
   min-height: 100vh;
 }
 .wrap { max-width: 880px; margin: 0 auto; }
+
+/* ---- metallic gold text ---- */
 .gold-text {
   background: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 45%, var(--gold-3) 70%, var(--gold-1) 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: var(--gold-2);
   text-shadow: 0 1px 0 rgba(0,0,0,.35);
 }
+
 header.top {
   position: relative;
-  background: linear-gradient(180deg, rgba(40,34,18,.95), rgba(12,11,8,.98));
+  background:
+    linear-gradient(180deg, rgba(40,34,18,.95), rgba(12,11,8,.98));
   border: 1px solid var(--line);
   border-radius: 18px; padding: 20px 24px;
   display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;
-  box-shadow: 0 18px 40px rgba(0,0,0,.65), inset 0 1px 0 rgba(247,231,168,.22), inset 0 -2px 10px rgba(0,0,0,.7);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.65),
+    inset 0 1px 0 rgba(247,231,168,.22),
+    inset 0 -2px 10px rgba(0,0,0,.7);
 }
 header.top::before{
   content:""; position:absolute; inset:0; border-radius:18px; padding:1px;
@@ -51,8 +59,12 @@ header.top::before{
 header.top h1 { font-size: 19px; margin: 0; font-weight: 800; letter-spacing:.3px; }
 header.top .sub { font-size: 12.5px; color:#b7ac8f; margin-top: 5px; }
 .clock { text-align: right; }
-.clock .big { font-size: 34px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing:1px; }
+.clock .big {
+  font-size: 34px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1;
+  letter-spacing:1px;
+}
 .clock .tz { font-size: 11.5px; color:#a99f84; margin-top: 5px; letter-spacing:.4px; }
+
 .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; align-items:center; }
 button {
   font-size: 14px; font-weight: 700; border: none; border-radius: 12px;
@@ -63,7 +75,10 @@ button:active { transform: translateY(1px); }
 .btn-primary {
   color: #241a03;
   background: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 48%, var(--gold-3) 100%);
-  box-shadow: 0 8px 18px rgba(200,150,44,.35), inset 0 1px 0 rgba(255,255,255,.65), inset 0 -2px 6px rgba(120,86,20,.6);
+  box-shadow:
+    0 8px 18px rgba(200,150,44,.35),
+    inset 0 1px 0 rgba(255,255,255,.65),
+    inset 0 -2px 6px rgba(120,86,20,.6);
 }
 .btn-primary:hover { filter: brightness(1.06); box-shadow: 0 10px 24px rgba(230,193,90,.5), inset 0 1px 0 rgba(255,255,255,.7); }
 .btn-ghost {
@@ -82,6 +97,7 @@ label.sel { font-size:12.5px; color:#b7ac8f; display:flex; align-items:center; g
 .status-pill { font-size:12.5px; padding:7px 14px; border-radius:999px; display:inline-flex; align-items:center; gap:6px; font-weight:700; border:1px solid transparent; }
 .on { background:linear-gradient(180deg,#14361d,#0c220f); color:#7ff0a3; border-color:#1f6b34; box-shadow: inset 0 1px 0 rgba(127,240,163,.2); }
 .off { background:linear-gradient(180deg,#2a1210,#1a0b0a); color:#ff9d94; border-color:#6b241e; }
+
 .nextline {
   position:relative;
   background: linear-gradient(180deg, #14120b, #0c0b07);
@@ -90,6 +106,7 @@ label.sel { font-size:12.5px; color:#b7ac8f; display:flex; align-items:center; g
   box-shadow: 0 10px 26px rgba(0,0,0,.55), inset 0 1px 0 rgba(247,231,168,.1);
 }
 .nextline b { color: var(--gold-1); }
+
 #alertBanner {
   display:none; position: sticky; top: 8px; z-index: 50;
   background: linear-gradient(180deg, #2a0f0c, #180706);
@@ -107,6 +124,7 @@ label.sel { font-size:12.5px; color:#b7ac8f; display:flex; align-items:center; g
 #alertBanner .a-meta { font-size:14px; margin-top:6px; color:#e8cfae; }
 #alertBanner .a-actions { display:flex; gap:8px; margin-top:14px; }
 #alertBanner button { background:linear-gradient(180deg,var(--gold-1),var(--gold-3)); color:#2a1a04; box-shadow: inset 0 1px 0 rgba(255,255,255,.6); }
+
 .tablewrap {
   border-radius:16px; overflow:hidden; border:1px solid var(--line);
   box-shadow: 0 18px 44px rgba(0,0,0,.6), inset 0 1px 0 rgba(247,231,168,.1);
@@ -130,6 +148,7 @@ tr.soon td { color:#ffe1c2; background: linear-gradient(90deg, rgba(120,40,20,.3
 .b-soon { background:linear-gradient(180deg,#e6553f,#a5311f); color:#fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 0 14px rgba(230,90,60,.5); }
 .b-done { background:#141210; color:#6f6858; border:1px solid #241f14; }
 .cd { font-variant-numeric:tabular-nums; }
+
 footer { margin-top:18px; font-size:12px; color:#8f866f; line-height:1.7; }
 .dot { color: var(--gold-4); }
 .empty {
@@ -137,6 +156,12 @@ footer { margin-top:18px; font-size:12px; color:#8f866f; line-height:1.7; }
   padding:26px; text-align:center; color:#8f866f;
   box-shadow: inset 0 1px 0 rgba(247,231,168,.06);
 }
+.stale {
+  display:none; background:linear-gradient(180deg,#2a1d08,#171005); border:1px solid #8a641a; color:#ffe7b0;
+  border-radius:14px; padding:16px 18px; margin-bottom:16px; font-size:14.5px; line-height:1.55;
+  box-shadow: 0 10px 26px rgba(0,0,0,.55), inset 0 1px 0 rgba(247,231,168,.15);
+}
+.stale b { color: var(--gold-1); }
 a { color: var(--gold-2); }
 </style>
 </head>
@@ -172,6 +197,8 @@ a { color: var(--gold-2); }
     </div>
   </div>
 
+  <div class="stale" id="staleBanner"></div>
+
   <div class="nextline" id="nextLine">Carregando…</div>
 
   <div class="tablewrap">
@@ -182,20 +209,21 @@ a { color: var(--gold-2); }
     <tbody id="tbody"></tbody>
   </table>
   </div>
-  <div class="empty" id="emptyMsg" style="display:none">Nenhum evento de 3 estrelas para esta data.</div>
+  <div class="empty" id="emptyMsg" style="display:none">Nenhum evento de 3 estrelas hoje.</div>
 
   <footer>
     <div><b style="color:var(--gold-1)">Como funciona:</b> o painel dispara aviso visual, sonoro e <b style="color:var(--gold-1)">locução por voz feminina</b> <b style="color:var(--gold-1)">5 minutos antes</b> de cada evento de 3 estrelas. Funciona enquanto esta página estiver aberta.</div>
-    <div style="margin-top:6px">Última atualização dos dados: <span id="lastUpd">—</span> <span class="dot">·</span> Motor automático (GitHub Actions) a cada ~15 min.</div>
+    <div style="margin-top:6px">Última atualização dos dados: <span id="lastUpd">—</span> <span class="dot">·</span> Motor automático a cada ~15 min (com aviso se os dados ficarem desatualizados).</div>
     <div style="margin-top:6px" id="voiceNote"></div>
   </footer>
 
 </div>
 
 <script>
-// ====== DADOS (atualizados automaticamente pela tarefa diária) ======
-// ====== DADOS -- vêm do dados.json, atualizado automaticamente pelo motor (GitHub Actions) ======
-let CAL = { dateLabel: "Carregando…", lastUpdated: "—", events: [] };
+// ====== DADOS -- vêm do dados.json, atualizado pelo motor (GitHub Actions) ======
+// Os dados vêm do arquivo dados.json, atualizado automaticamente pelo motor
+// (GitHub Actions) a cada ~15 min direto do Investing. O painel recarrega sozinho.
+let CAL = { loading: true, dateLabel: "Carregando…", lastUpdated: "—", events: [] };
 const LEAD_MS = 5 * 60 * 1000; // 5 minutos
 
 // ====== ESTADO ======
@@ -204,28 +232,53 @@ let audioCtx = null;
 const fired = new Set();      // eventos já alertados (T-5)
 let lastSpokenText = '';
 
+function todaySP(){
+  return new Intl.DateTimeFormat('en-CA',{ timeZone:'America/Sao_Paulo', year:'numeric', month:'2-digit', day:'2-digit' }).format(new Date());
+}
+// data (AAAA-MM-DD) a que um bloco de dados se refere
+function dataDate(d){
+  if(!d) return '';
+  if(d.date) return d.date;
+  const m = (d.lastUpdated||'').match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if(m) return m[3]+'-'+m[2]+'-'+m[1];
+  if(d.events && d.events[0]) return String(d.events[0].iso).slice(0,10);
+  return '';
+}
+function isFresh(d){ return dataDate(d) === todaySP(); }
+
 function applyMeta(){
   document.getElementById('dateLabel').textContent = CAL.dateLabel;
   document.getElementById('lastUpd').textContent = CAL.lastUpdated;
 }
 async function loadData(){
   const ts = Date.now();
+  // 1º tenta o arquivo local (GitHub Pages); depois o GitHub direto.
+  // ANTI-DADO-VELHO: só aceita dados.json de HOJE (Brasília). Se o motor parar,
+  // mantém o dado de hoje que já estiver na tela ou mostra aviso de desatualizado.
   const SOURCES = [
     'dados.json?_=' + ts,
     'https://raw.githubusercontent.com/aprendermercadofinanceiro-alt/calendario-economico/main/dados.json?_=' + ts
   ];
+  let fallback = null;
   for(const url of SOURCES){
     try{
       const r = await fetch(url, { cache:'no-store' });
       if(!r.ok) continue;
       const d = await r.json();
-      if(d && Array.isArray(d.events)){ CAL = d; applyMeta(); render(); return; }
-    }catch(e){}
+      if(!d || !Array.isArray(d.events)) continue;
+      if(isFresh(d)){ CAL = d; applyMeta(); render(); return; }
+      if(!fallback) fallback = d;
+    }catch(e){ /* tenta a próxima fonte */ }
+  }
+  if(!isFresh(CAL)){
+    if(fallback) CAL = fallback;
+    CAL.loading = false;
+    applyMeta(); render();
   }
 }
 applyMeta();
 loadData();
-setInterval(loadData, 5 * 60 * 1000);
+setInterval(loadData, 5 * 60 * 1000); // recarrega os dados a cada 5 min
 
 // ---------- VOZ (Web Speech API) ----------
 let voices = [], selectedVoice = null;
@@ -234,7 +287,6 @@ const MALE_HINTS = /daniel|felipe|ricardo|jo[aã]o|paulo|male|masc/i;
 
 function refreshVoiceList(){
   const all = ('speechSynthesis' in window) ? window.speechSynthesis.getVoices() : [];
-  // prioriza pt-BR; se não houver, usa pt qualquer; se nada, todas
   let ptbr = all.filter(v=>/pt(-|_)?br/i.test(v.lang));
   let pt   = all.filter(v=>/^pt/i.test(v.lang));
   voices = ptbr.length ? ptbr : (pt.length ? pt : all);
@@ -247,7 +299,6 @@ function refreshVoiceList(){
     sel.appendChild(o);
   });
 
-  // escolha automática: feminina pt-BR
   let idx = voices.findIndex(v=>/pt(-|_)?br/i.test(v.lang) && FEM_HINTS.test(v.name) && !MALE_HINTS.test(v.name));
   if(idx < 0) idx = voices.findIndex(v=>/pt(-|_)?br/i.test(v.lang) && !MALE_HINTS.test(v.name));
   if(idx < 0) idx = voices.length ? 0 : -1;
@@ -272,7 +323,6 @@ document.getElementById('voiceSel').onchange = (e)=>{
   if(!isNaN(i) && voices[i]) selectedVoice = voices[i];
 };
 
-// locução estilo jornalista: aguda, rápida, animada
 function speak(text){
   if(!('speechSynthesis' in window)) return;
   try{
@@ -364,6 +414,25 @@ document.getElementById('testBtn').onclick = ()=>{
 
 function render(){
   document.getElementById('clock').textContent = brClock();
+  const sb = document.getElementById('staleBanner');
+  if(CAL.loading){
+    sb.style.display = 'none';
+    document.getElementById('tbl').style.display = 'none';
+    document.getElementById('emptyMsg').style.display = 'none';
+    document.getElementById('nextLine').innerHTML = 'Carregando eventos de hoje…';
+    return;
+  }
+  if(!isFresh(CAL)){
+    sb.style.display = 'block';
+    sb.innerHTML = '⚠ <b>Dados desatualizados.</b> A última coleta foi em <b>'+(CAL.lastUpdated||'—')+
+      '</b> e os eventos de hoje ainda não chegaram. Enquanto isso, confira direto no '+
+      '<a href="https://br.investing.com/economic-calendar/" target="_blank" rel="noopener">Investing.com</a>.';
+    document.getElementById('tbl').style.display = 'none';
+    document.getElementById('emptyMsg').style.display = 'none';
+    document.getElementById('nextLine').innerHTML = '⏳ Aguardando os dados de hoje…';
+    return;
+  }
+  sb.style.display = 'none';
   const now = nowMs();
   const tbody = document.getElementById('tbody');
   const evs = CAL.events.slice().sort((a,b)=> new Date(a.iso)-new Date(b.iso));
@@ -402,7 +471,7 @@ function render(){
     const d = new Date(nextEv.iso).getTime()-now;
     nl.innerHTML = 'Próximo evento 3★: <b>'+nextEv.flag+' '+nextEv.name+'</b> às <b>'+hmFromIso(nextEv.iso)+'</b> · faltam <b class="cd">'+fmtDelta(d)+'</b>';
   } else {
-    nl.innerHTML = '✅ Todos os eventos de 3★ de hoje já foram divulgados. O painel se atualiza amanhã de manhã.';
+    nl.innerHTML = evs.length ? '✅ Todos os eventos de 3★ de hoje já foram divulgados.' : 'Hoje não há eventos de 3★ com horário definido.';
   }
 }
 
